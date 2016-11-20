@@ -3,23 +3,14 @@
     "target": "es5",
     "module": "es2015",
     "moduleResolution": "node",
-    "declaration": false,
-    "removeComments": true,
+    "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "sourceMap": true,
-    "pretty": true,
-    "allowUnreachableCode": false,
-    "allowUnusedLabels": false,
+    "removeComments": false,
     "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitUseStrict": false,
-    "noFallthroughCasesInSwitch": true,
+    "suppressImplicitAnyIndexErrors": true,
     "outDir": "../dist/out-tsc",
-    "lib": [
-      "es2015",
-      "dom"
-    ]
+    "lib": ["es2015","dom"]
   },
   "angularCompilerOptions": {
     "genDir": "aot",
