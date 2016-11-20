@@ -59,8 +59,7 @@ module.exports = {
             path.join(process.cwd(), 'src')
         ),
         new CopyWebpackPlugin([
-            {from: 'index.html'},
-            {from: 'favicon.ico'}
+            {from: 'index.html'}
         ]),
         new ExtractTextPlugin('style.bundle.css'),
         new webpack.LoaderOptionsPlugin({

@@ -1,13 +1,13 @@
 {
-  "name": "angular2-aot-webpack",
+  "name": "webpack-aot",
   "version": "1.0.0",
   "description": "Angular 2 AOT (Ahead Of Time) offline compilation example with Webpack",
   "main": "index.js",
   "scripts": {
     "ngc": "ngc -p ./tsconfig.json",
     "serve": "http-server ./dist -a 0.0.0.0 -p 9000",
-    "webpack-prod": "webpack --config webpack.prod.config.js",
-    "start": "npm run ngc && npm run webpack-prod && npm run serve"
+    "start-prod": "npm run ngc && npm run webpack-prod && npm run serve",
+    "webpack-prod": "webpack --config webpack.prod.config.js"
   },
   "keywords": [
     "angular2",
@@ -16,11 +16,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/blacksonic/angular2-aot-webpack.git"
+    "url": "git+https://github.com/daniele-zurico/webpack-aot.git"
   },
   "author": {
-    "name": "blacksonic",
-    "email": "soos.gabor86@gmail.com"
+    "name": "daniele zurico",
+    "email": "daniele.zurico@gmail.com"
   },
   "license": "ISC",
   "dependencies": {

@@ -1,11 +1,12 @@
-this project allow to compile in AOT mode with webpack
+Simple project that allow to use webpack aot and material design
 
-usage:
+Install all the packages:
 ```
-npm install
+ npm install
 ```
 
-to compile:
+To run it:
+
 ```
-npm run start
+npm run start-prod
 ```
