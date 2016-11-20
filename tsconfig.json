@@ -16,16 +16,14 @@
     "noImplicitUseStrict": false,
     "noFallthroughCasesInSwitch": true,
     "outDir": "../dist/out-tsc",
-    "typeRoots": [ "./node_modules/@types" ],
-    "types": [
-      "core-js",
-      "node",
-      "hammerjs"
+    "lib": [
+      "es2015",
+      "dom"
     ]
   },
   "angularCompilerOptions": {
     "genDir": "aot",
-    "skipMetadataEmit" : true
+    "skipMetadataEmit": true
   },
   "files": [
     "src/app/modules/main.module.ts"
