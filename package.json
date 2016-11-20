@@ -4,7 +4,7 @@
   "description": "Angular 2 AOT (Ahead Of Time) offline compilation example with Webpack",
   "main": "index.js",
   "scripts": {
-    "ngc": "ngc -p ./tsconfig.aot.json",
+    "ngc": "ngc -p ./tsconfig.json",
     "serve": "http-server ./dist -a 0.0.0.0 -p 9000",
     "webpack-prod": "webpack --config webpack.prod.config.js",
     "start": "npm run ngc && npm run webpack-prod && npm run serve"
