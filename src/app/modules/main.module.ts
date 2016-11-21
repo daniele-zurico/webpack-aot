@@ -5,8 +5,6 @@ import {MaterialModule} from '@angular/material';
 import {MainComponent} from './main.component';
 import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
-import {HelloWorld2Component} from '../hello-world-2/HelloWorld2Component';
-
 
 const ROUTE_CONFIG = [
     {
@@ -20,12 +18,8 @@ const ROUTE_CONFIG = [
     },
     {
         path: 'test',
-        component: HelloWorld2Component
+        loadChildren: 'es6-promise-loader?,[name]!../hello-world-2/HelloWorld2.module#HelloWorld2Module'
     },
-    // {
-    //     path: 'test',
-    //     loadChildren: '../hello-world-2/HelloWorld2Module#HelloWorld2Module'
-    // },
     {
         path: '**',
         redirectTo: 'home'
@@ -34,12 +28,12 @@ const ROUTE_CONFIG = [
 
 @NgModule({
     bootstrap: [MainComponent],
-    declarations: [MainComponent, HelloWorldComponent, HelloWorld2Component],
+    declarations: [MainComponent, HelloWorldComponent],
     imports: [
         CommonModule,
         BrowserModule,
         MaterialModule.forRoot(),
-        RouterModule.forRoot(ROUTE_CONFIG)
+        RouterModule.forRoot(ROUTE_CONFIG, { useHash: true})
     ],
     providers: []
 })

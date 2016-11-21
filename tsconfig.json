@@ -10,13 +10,11 @@
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true,
     "outDir": "../dist/out-tsc",
+    "rootDir": ".",
     "lib": ["es2015","dom"]
   },
   "angularCompilerOptions": {
     "genDir": "aot",
     "skipMetadataEmit": true
-  },
-  "files": [
-    "src/app/modules/main.module.ts"
-  ]
+  }
 }
