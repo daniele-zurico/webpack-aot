@@ -6,7 +6,7 @@
   "scripts": {
     "ngc": "ngc -p ./tsconfig.json",
     "serve": "http-server ./dist -a 0.0.0.0 -p 9000",
-    "start-prod": "npm run ngc && npm run webpack-prod && npm run serve",
+    "start-prod": "gulp && npm run ngc && npm run webpack-prod && npm run serve",
     "webpack-prod": "webpack --config webpack.prod.config.js"
   },
   "keywords": [
@@ -51,6 +51,8 @@
     "extract-text-webpack-plugin": "2.0.0-beta.4",
     "file-loader": "0.9.0",
     "gh-pages": "0.12.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2",
     "http-server": "0.9.0",
     "raw-loader": "0.5.1",
     "sass-loader": "^4.0.2",
