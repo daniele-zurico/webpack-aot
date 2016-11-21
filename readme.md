@@ -1,4 +1,4 @@
-Simple project that allow to use webpack aot and material design
+Simple project that allow to use webpack aot with lazy loading
 
 Install all the packages:
 ```
@@ -8,12 +8,10 @@ Install all the packages:
 To run it:
 
 ```
-npm run start-prod
+npm run build
 ```
 
-#### Scss:
-It contains a work around, before to compile with ngc I trasform in css the scss file through a gulp task (`"start-prod": "gulp"`). In your component load the `css` file
-If there will be a better solution I'll update it
-
-
-### It supports lazy loading in the routing
+to test run:
+```
+live-server
+```
