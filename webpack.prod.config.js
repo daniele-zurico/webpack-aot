@@ -3,6 +3,7 @@ var path = require('path');
 var webpack = require('webpack');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var extractCSS = new ExtractTextPlugin('stylesheets/[name].css');
 
 module.exports = {
     entry: {
@@ -41,9 +42,17 @@ module.exports = {
                 })
             },
             {
+                test: /\.scss$/,
+                use: extractCSS.extract({
+                    fallbackLoader: 'style-loader',
+                    loader: 'css-loader!sass-loader'
+                }),
+            },
+            {
                 test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
                 loader: 'url-loader?limit=10000&mimetype=application/font-woff'
-            },
+            }
+            ,
             {
                 test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
                 loader: 'file-loader'
@@ -52,6 +61,7 @@ module.exports = {
     },
 
     plugins: [
+        extractCSS,
         new webpack.ProgressPlugin(),
         new webpack.ContextReplacementPlugin(
             // The (\\|\/) piece accounts for path separators in *nix and Windows
@@ -83,9 +93,11 @@ module.exports = {
             path.resolve(process.cwd(), 'src')
         ],
         extensions: ['.ts', '.js']
-    },
+    }
+    ,
 
     stats: 'errors-only',
 
     devtool: 'source-map'
-};
+}
+;
